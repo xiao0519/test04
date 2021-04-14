@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>trigger</title>
+	</head>
+	<body>
+		<button class="btn">确定</button>
+		<input type="text">
+		
+	</body>
+	<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+	<script type="text/javascript">
+		//trigger 触发一个元素的事件
+		// $(".btn").click(function(){
+		// 	$("input").trigger("focus")
+		// 		
+		// })
+		//triggerHandler() 不会触发默认事件
+		$(".btn").click(function(){
+			$("input").triggerHandler("focus")
+				
+		})
+		$("input").focus(function(){
+			console.log("聚焦");
+		})
+		
+	</script>
+</html>
